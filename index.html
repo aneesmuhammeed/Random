@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+<body>
+  <div class="circle">
+    <div class="logo">
+      
+    </div>
+    <div class="text">
+      <p>
+        TinkerHub MEC Thrikkakara
+      </p>
+    </div>
+  </div>
+  <br>
+
+  <div class="skills">
+    MEC THRIKKAKARA • TINKERHUB • USELESS PROJECT •
+    MEC THRIKKAKARA • TINKERHUB • USELESS PROJECT •
+    MEC THRIKKAKARA • TINKERHUB • USELESS PROJECT •
+    MEC THRIKKAKARA • TINKERHUB • USELESS PROJECT •
+  </div>
+
+  <script>
+    const text = document.querySelector('.text p');
+    text.innerHTML = text.innerText.split("").map(
+      (char,i) =>
+      `<span style="transform:rotate(${i * 14}deg)">${char}</span>`
+    ).join("")
+  </script>
+</body>
+</html>

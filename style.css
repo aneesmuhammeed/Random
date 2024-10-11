@@ -1,0 +1,76 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.circle{
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  /* background-color: #ccc; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo{
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  background: url(img.png);
+  background-size: 180px;
+  margin-left: -38px; /*tinkerhub logo shifting*/
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+}
+
+.text{
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 700;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  animation:rotateTest 10s linear infinite;
+}
+
+@keyframes rotateTest {
+  0%{
+    transform: rotate(360deg);
+  }
+  100%{
+    transform: rotate(0deg);
+  }
+}
+
+.text span{
+  position: absolute;
+  left: 50%;
+  transform-origin: 0 100px;
+}
+
+
+
+
+
+.skills{
+  text-transform:uppercase;
+  font-size:4vw;
+  display: inline-block;
+  white-space: nowrap;
+  animation: floatText 25s infinite linear;
+  padding-left: 100%; /*Initial offset, which places the text off-screen*/
+  color:#000000;
+}
+
+@keyframes floatText {
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.skills:hover, .langs:hover  {
+  animation-play-state: paused;
+}
